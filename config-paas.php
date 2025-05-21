@@ -1,16 +1,20 @@
 <?php
-$server = "sqlserver-proyecto.database.windows.net"; 
-$user = "adminlizeth";
-$password = "pass123$"; 
-$database = "bd_u5";
-$is_paas = true; 
+$serverName = "sqlserver-proyecto.database.windows.net"; // Opcional: puedes especificar el puerto si no es el 1433 predeterminado
+$connectionOptions = array(
+    "Database" => "bd_u5",
+    "Uid" => "adminlizeth",
+    "PWD" => "pass123$" // ¡Recuerda, esto debe ir en variables de entorno en producción!
+);
 
-$conn = new mysqli($server, $user, $password, $database);
+try {
+    // Establecer la conexión con PDO_SQLSRV
+    $conn = new PDO("sqlsrv:Server=$serverName;Database=" . $connectionOptions['Database'], $connectionOptions['Uid'], $connectionOptions['PWD']);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Habilita el modo de error de excepciones para un mejor manejo de errores
 
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    echo "Conexión exitosa a la base de datos SQL Server!";
+
+
+} catch (PDOException $e) {
+    die("Conexión fallida a SQL Server: " . $e->getMessage());
 }
-
-echo "Conexión exitosa a la base de datos!";
-
 ?>
