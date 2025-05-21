@@ -1,7 +1,7 @@
 <?php
 $server = "sqlserver-proyecto.database.windows.net"; 
-$user = "app_estudiantes_u5";
-$password = "PasswordSeguro789!"; 
+$user = "adminlizeth";
+$password = "pass123$"; 
 $database = "bd_u5";
 $is_paas = true; 
 
