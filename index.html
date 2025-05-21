@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Estudiantes - Cloud</title>
+</head>
+<body>
+    <h1>Registro de Estudiantes</h1>
+    <form action="guardar.php" method="post">
+        <label>Matrícula:</label>
+        <input type="text" name="matricula" required><br>
+
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required><br>
+
+        <label>Carrera:</label>
+        <select name="carrera">
+            <option value="Computacion">Computacion</option>
+            <option value="Cloud">Computo en la Nube</option>
+        </select><br>
+
+        <input type="submit" value="Guardar">
+    </form>
+    <a href="consulta.php">Ver registros</a>
+</body>
+</html>
