@@ -1,5 +1,5 @@
 <?php
-require 'config-iaas.php'; // o config-paas.php
+require 'config-paas.php'; // o config-paas.php
 
 $sql = "SELECT * FROM estudiantes";
 $result = $conn->query($sql);
