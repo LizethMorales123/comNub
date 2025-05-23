@@ -1,5 +1,5 @@
 <?php
-$serverName = "sqlserver-proyecto.database.windows.net"; // Opcional: puedes especificar el puerto si no es el 1433 predeterminado
+$serverName = "20.10.2.4"; // Opcional: puedes especificar el puerto si no es el 1433 predeterminado
 $connectionOptions = array(
     "Database" => "bd_u5",
     "Uid" => "adminlizeth",
