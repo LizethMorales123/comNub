@@ -1,5 +1,5 @@
 <?php
-$serverName = "20.10.2.4"; // ¡Cámbialo a esto!
+$serverName = "sqlserver-proyecto.database.windows.net"; // ¡Cámbialo a esto!
 $connectionOptions = array(
     "Database" => "bd_u5",
     "Uid" => "app_estudiantes_u5",
