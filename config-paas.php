@@ -11,8 +11,8 @@
 $serverName = "20.10.2.4";
 $connectionOptions = array(
     "Database" => "bd_u5",
-    "Uid" => "adminlizeth",
-    "PWD" => "pass123$" // ¡Recuerda, esto debe ir en variables de entorno en producción!
+    "Uid" => "app_estudiantes_u5",
+    "PWD" => "PasswordSeguro789!" // ¡Recuerda, esto debe ir en variables de entorno en producción!
 );
 
 try {
